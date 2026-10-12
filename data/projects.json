@@ -1,0 +1,39 @@
+[
+  {
+    "title": "Student Portfolio Website",
+    "description": "A responsive personal website that introduces me, presents my learning skills, and displays my work.",
+    "technologies": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "JSON"
+    ],
+    "role": "Designer and developer",
+    "symbol": "</>",
+    "link": "https://github.com/YOUR_GITHUB_USERNAME/YOUR_PORTFOLIO_REPO"
+  },
+  {
+    "title": "Java Practice Programs",
+    "description": "A collection of beginner exercises for practicing input, output, conditions, loops, and problem-solving.",
+    "technologies": [
+      "Java",
+      "Scanner",
+      "Logic"
+    ],
+    "role": "Student developer",
+    "symbol": "{ }",
+    "link": "https://github.com/YOUR_GITHUB_USERNAME"
+  },
+  {
+    "title": "Mini Game Concept",
+    "description": "A starter concept for a small game project focused on rules, player interaction, and improving programming fundamentals.",
+    "technologies": [
+      "Game Design",
+      "Logic",
+      "Planning"
+    ],
+    "role": "Concept and planning",
+    "symbol": "✦",
+    "link": "https://github.com/YOUR_GITHUB_USERNAME"
+  }
+]

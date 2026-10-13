@@ -9,208 +9,263 @@
 </head>
 <body>
 
-  <header class="navbar">
-    <a href="#home" class="logo">JP<span>.</span></a>
-    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">☰</button>
-    <nav id="nav-menu">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#education">Education</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+<header class="navbar">
+  <a href="#home" class="logo">JP<span>.</span></a>
+  <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation">☰</button>
+  <nav id="nav-menu">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-  <main>
-    <section class="hero" id="home">
-      <div class="hero-card">
-        <img src="images/profile.jpg" alt="Joshua Pablo" class="profile-picture">
-        <p class="eyebrow">WELCOME TO MY PORTFOLIO</p>
-        <h1>Hi, I'm <span>Joshua Pablo</span></h1>
-        <h2>Aspiring Game Programmer</h2>
-        <p class="intro">
-          I'm a first-year BS Technology student from Nueva Vizcaya
-          who enjoys technology, problem-solving, and learning how
-          games and applications are created.
-        </p>
-        <div class="hero-buttons">
-          <a href="#projects" class="btn primary">View My Projects</a>
-          <a href="#contact" class="btn secondary">Contact Me</a>
-        </div>
-        <div class="social-links">
-          <a href="https://github.com/joshua-pablo" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-        </div>
+<main>
+  <section id="home" class="hero">
+    <div class="hero-card">
+      <img src="images/profile.jpg" alt="Joshua Pablo" class="profile-picture">
+      <p class="eyebrow">HELLO, I'M</p>
+      <h1>Joshua Pablo</h1>
+      <h2>Aspiring Game Programmer</h2>
+      <p class="intro">
+        I'm a first-year BS Technology student from Nueva Vizcaya.
+        I enjoy chess, cycling, Mobile Legends, and learning how
+        programming can turn ideas into real applications and games.
+      </p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn primary">View My Projects</a>
+        <a href="#contact" class="btn secondary">Contact Me</a>
       </div>
-    </section>
+      <div class="tag-list centered">
+        <span>BS Technology · First Year</span>
+        <span>Future Game Programmer</span>
+      </div>
+    </div>
+  </section>
 
-    <section class="section" id="about">
-      <div class="section-heading">
-        <p class="eyebrow">GET TO KNOW ME</p>
-        <h2>About <span>Me</span></h2>
-        <p>A little introduction about who I am.</p>
+  <section id="about" class="section">
+    <div class="section-heading">
+      <h2>About Me</h2>
+      <div class="heading-line"></div>
+    </div>
+
+    <div class="card">
+      <h3>Biography</h3>
+      <p>
+        I am Joshua Pablo, a college student pursuing a Bachelor of
+        Science in Technology. I am interested in programming,
+        technology, and game development. I enjoy solving problems
+        and learning new skills that can help me reach my dream of
+        becoming a successful game programmer.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>My Interests</h3>
+      <div class="tag-list">
+        <span>Chess</span>
+        <span>Cycling</span>
+        <span>Mobile Legends</span>
+        <span>Programming</span>
+        <span>Game Development</span>
+        <span>Technology</span>
       </div>
-      <div class="card about-card">
-        <h3>Hello, I'm Joshua!</h3>
+    </div>
+
+    <div class="card">
+      <h3>Career Goals</h3>
+      <p>
+        My goal is to improve my programming skills, create useful
+        applications and games, gain experience through projects,
+        and eventually become a successful game programmer.
+      </p>
+    </div>
+  </section>
+
+  <section id="education" class="section">
+    <div class="section-heading">
+      <h2>Education</h2>
+      <div class="heading-line"></div>
+    </div>
+
+    <div class="card">
+      <p class="date">CURRENTLY STUDYING</p>
+      <h3>Bachelor of Science in Technology</h3>
+      <p>First-Year College Student</p>
+      <p class="muted">
+        Building my knowledge in technology and developing the
+        foundation I need for a future in programming.
+      </p>
+    </div>
+  </section>
+
+  <section id="skills" class="section">
+    <div class="section-heading">
+      <h2>Skills</h2>
+      <div class="heading-line"></div>
+    </div>
+
+    <div class="card">
+      <h3>Programming Languages</h3>
+      <div class="tag-list">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>Java</span>
+        <span>JavaScript</span>
+      </div>
+      <p class="muted small">
+        These are technologies I am learning and practicing.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Tools and Technologies</h3>
+      <div class="tag-list">
+        <span>Git</span>
+        <span>GitHub</span>
+        <span>GitHub Pages</span>
+        <span>VS Code</span>
+        <span>JSON</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Soft Skills</h3>
+      <div class="tag-list">
+        <span>Critical Thinking</span>
+        <span>Problem Solving</span>
+        <span>Teamwork</span>
+        <span>Creativity</span>
+        <span>Willingness to Learn</span>
+        <span>Time Management</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="section-heading">
+      <h2>Projects</h2>
+      <div class="heading-line"></div>
+    </div>
+
+    <p class="muted project-intro">
+      Here are some of my learning projects and programming goals.
+    </p>
+
+    <div class="projects-grid">
+      <div class="card project-card">
+        <h3>Personal Portfolio</h3>
         <p>
-          I am a college student pursuing a Bachelor of Science in
-          Technology. I am interested in programming, game development,
-          and discovering how technology can solve problems.
-        </p>
-        <p>
-          I enjoy playing chess, cycling, and playing Mobile Legends.
-          Chess helps me practice critical thinking and plan my next
-          move carefully. My goal is to become a successful game
-          programmer and continue improving my skills.
+          A website that introduces my background, skills,
+          interests, and career goals.
         </p>
         <div class="tag-list">
-          <span>Problem Solving</span>
-          <span>Critical Thinking</span>
-          <span>Game Development</span>
-          <span>Continuous Learning</span>
+          <span>HTML</span><span>CSS</span><span>GitHub Pages</span>
         </div>
+        <a class="project-link"
+           href="https://github.com/joshua-pablo/joshua-pablo.github.io"
+           target="_blank" rel="noopener noreferrer">View Repository ↗</a>
       </div>
-    </section>
 
-    <section class="section" id="education">
-      <div class="section-heading">
-        <p class="eyebrow">MY LEARNING JOURNEY</p>
-        <h2>My <span>Education</span></h2>
-        <p>Building my knowledge one step at a time.</p>
-      </div>
-      <div class="card education-card">
-        <div class="timeline-dot"></div>
-        <p class="date">CURRENTLY STUDYING</p>
-        <h3>Bachelor of Science in Technology</h3>
-        <p class="muted">College · First Year</p>
+      <div class="card project-card">
+        <h3>Java Practice</h3>
         <p>
-          Developing my foundation in technology, logical thinking,
-          and programming while preparing for a future in game development.
+          Programming exercises that help me practice logic,
+          input handling, and solving problems with code.
         </p>
+        <div class="tag-list"><span>Java</span><span>Programming</span></div>
+        <p class="muted">Learning in progress</p>
       </div>
-    </section>
 
-    <section class="section" id="skills">
-      <div class="section-heading">
-        <p class="eyebrow">WHAT I'M LEARNING</p>
-        <h2>My <span>Skills</span></h2>
-        <p>Skills I am developing through practice and study.</p>
+      <div class="card project-card">
+        <h3>Game Development Goal</h3>
+        <p>
+          My future goal is to create games with engaging gameplay
+          and enjoyable experiences for players.
+        </p>
+        <div class="tag-list"><span>Games</span><span>Programming</span></div>
+        <p class="muted">Future project</p>
       </div>
-      <div class="skills-grid">
-        <div class="card">
-          <h3>Technical Skills</h3>
-          <div class="skill-item">
-            <div class="skill-label"><span>HTML</span><span>Learning</span></div>
-            <div class="skill-track"><div class="skill-fill html"></div></div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-label"><span>CSS</span><span>Learning</span></div>
-            <div class="skill-track"><div class="skill-fill css"></div></div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-label"><span>Java</span><span>Learning</span></div>
-            <div class="skill-track"><div class="skill-fill java"></div></div>
-          </div>
-        </div>
-        <div class="card">
-          <h3>Personal Skills</h3>
-          <div class="tag-list">
-            <span>Critical Thinking</span>
-            <span>Problem Solving</span>
-            <span>Willingness to Learn</span>
-            <span>Creativity</span>
-            <span>Persistence</span>
-            <span>Teamwork</span>
-          </div>
-          <p class="muted small">
-            I continue to improve these skills through school activities
-            and personal projects.
-          </p>
-        </div>
-      </div>
-    </section>
+    </div>
 
-    <section class="section" id="projects">
-      <div class="section-heading">
-        <p class="eyebrow">MY WORK</p>
-        <h2>My <span>Projects</span></h2>
-        <p>A collection of my learning activities and creations.</p>
-      </div>
-      <div class="projects-grid">
-        <article class="card project-card">
-          <div class="project-icon">🌐</div>
-          <p class="project-type">WEB DEVELOPMENT</p>
-          <h3>Personal Portfolio</h3>
-          <p>
-            A personal website introducing my background, skills,
-            learning journey, and goals as a future programmer.
-          </p>
-          <div class="tag-list"><span>HTML</span><span>CSS</span><span>GitHub Pages</span></div>
-          <a class="project-link" href="https://github.com/joshua-pablo/joshua-pablo.github.io" target="_blank" rel="noopener noreferrer">View Repository ↗</a>
-        </article>
-        <article class="card project-card">
-          <div class="project-icon">💻</div>
-          <p class="project-type">PROGRAMMING</p>
-          <h3>Java Practice Programs</h3>
-          <p>
-            Small programming exercises created to practice logic,
-            input handling, and problem-solving.
-          </p>
-          <div class="tag-list"><span>Java</span><span>Logic</span></div>
-          <span class="project-link">More projects coming soon</span>
-        </article>
-        <article class="card project-card">
-          <div class="project-icon">🎮</div>
-          <p class="project-type">FUTURE GOAL</p>
-          <h3>Game Development</h3>
-          <p>
-            My future goal is to create games that are enjoyable,
-            creative, and engaging for players.
-          </p>
-          <div class="tag-list"><span>Game Design</span><span>Programming</span></div>
-          <span class="project-link">In progress</span>
-        </article>
-      </div>
-    </section>
+    <div class="card repository-card">
+      <h3>My GitHub</h3>
+      <p>Explore my code and follow my progress as I learn.</p>
+      <a class="project-link" href="https://github.com/joshua-pablo"
+         target="_blank" rel="noopener noreferrer">github.com/joshua-pablo ↗</a>
+    </div>
+  </section>
 
-    <section class="section contact-section" id="contact">
-      <div class="section-heading">
-        <p class="eyebrow">LET'S CONNECT</p>
-        <h2>Contact <span>Me</span></h2>
-        <p>Feel free to visit my GitHub profile or reach out by email.</p>
-      </div>
-      <div class="card contact-card">
-        <div class="contact-item">
-          <span class="contact-icon">⌘</span>
-          <div><h3>GitHub</h3><a href="https://github.com/joshua-pablo" target="_blank" rel="noopener noreferrer">github.com/joshua-pablo</a></div>
-        </div>
-        <div class="contact-item">
-          <span class="contact-icon">✉</span>
-          <div><h3>Email</h3><p>Add your email address here</p></div>
-        </div>
-        <a href="https://github.com/joshua-pablo" target="_blank" rel="noopener noreferrer" class="btn primary">Visit My GitHub</a>
-      </div>
-    </section>
-  </main>
+  <section id="contact" class="section">
+    <div class="section-heading">
+      <h2>Contact</h2>
+      <div class="heading-line"></div>
+    </div>
 
-  <footer>
-    <a href="#home" class="logo">JP<span>.</span></a>
-    <p>Designed and built by Joshua Pablo.</p>
-    <p class="copyright">© 2026 Joshua Pablo. All rights reserved.</p>
-  </footer>
+    <div class="card">
+      <h3>Let's connect</h3>
+      <p>
+        I am open to learning opportunities and connecting with
+        people who share an interest in technology and programming.
+      </p>
+      <p class="contact-detail">
+        <strong>GitHub:</strong>
+        <a href="https://github.com/joshua-pablo"
+           target="_blank" rel="noopener noreferrer">
+          github.com/joshua-pablo
+        </a>
+      </p>
+      <p class="contact-detail">
+        <strong>Email:</strong> Add your email address here
+      </p>
+    </div>
 
-  <script src="js/script.js"></script>
-  <script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const navMenu = document.getElementById('nav-menu');
+    <div class="card">
+      <h3>Send a message</h3>
+      <form action="mailto:YOUR-EMAIL@example.com"
+            method="post" enctype="text/plain">
+        <label for="name">Name</label>
+        <input id="name" name="Name" type="text"
+               placeholder="Your name" required>
 
-    menuToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
-    });
+        <label for="email">Email</label>
+        <input id="email" name="Email" type="email"
+               placeholder="you@example.com" required>
 
-    navMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => navMenu.classList.remove('active'));
-    });
-  </script>
+        <label for="message">Message</label>
+        <textarea id="message" name="Message"
+                  placeholder="How can I help?" rows="6" required></textarea>
+
+        <button type="submit" class="btn primary">Send</button>
+      </form>
+      <p class="muted small">
+        Replace YOUR-EMAIL@example.com with your email address.
+        The mail form depends on the visitor having an email app configured.
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <a href="#home" class="logo">JP<span>.</span></a>
+  <p>Designed and built by Joshua Pablo.</p>
+  <p class="muted small">© 2026 Joshua Pablo</p>
+</footer>
+
+<script src="js/script.js"></script>
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('nav-menu');
+
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('active');
+  });
+
+  menu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => menu.classList.remove('active'));
+  });
+</script>
 </body>
 </html>

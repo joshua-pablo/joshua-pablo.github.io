@@ -1,208 +1,104 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joshua Pablo | Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Joshua Pablo's student portfolio, skills, and projects.">
+  <title>Joshua Pablo | Student Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
 </head>
 <body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="Joshua Pablo home"><span class="brand-mark">JP</span><span>Joshua Pablo<span class="brand-dot">.</span></span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Switch color theme" title="Switch color theme">☾</button>
+    </nav>
+  </header>
 
-<header class="site-header">
-    <div class="container nav-container">
-        <a href="#home" class="logo">JP<span>.</span></a>
-        <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
-        <nav class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </div>
-</header>
-
-<main>
-    <section id="home" class="hero container">
+  <main>
+    <section class="hero section" id="home">
+      <div class="container hero-grid">
+<img src="images/profile.jpg" alt="Joshua Pablo" class="profile-picture">
         <div class="hero-copy">
-            <p class="eyebrow">HELLO, I'M</p>
-            <h1>Joshua <span>Pablo</span></h1>
-            <h2>Aspiring Game Programmer</h2>
-            <p>
-                I'm a second-year BS Technology student who enjoys
-                learning programming, solving problems, and exploring
-                how technology can be used to create games and useful applications.
-            </p>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn">View My Projects</a>
-                <a href="#contact" class="btn btn-outline">Contact Me</a>
-            </div>
+          <p class="eyebrow"><span class="status-dot"></span> STUDENT • ASPIRING GAME DEVELOPER</p>
+          <h1>Hi, I'm <span class="gradient-text">Joshua Pablo.</span></h1>
+          <h2 class="hero-tagline">I turn curiosity into <span id="typingText">creative code.</span><span class="cursor">|</span></h2>
+          <p class="hero-description">I'm a first-year BS Technology student who enjoys solving problems, learning how software works, and exploring the world of game development.</p>
+          <div class="hero-actions"><a class="button button-primary" href="#projects">Explore my projects <span>↗</span></a><a class="button button-ghost" href="#contact">Let's connect</a></div>
+          <div class="hero-socials"><a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank" rel="noreferrer">GitHub ↗</a><span>•</span><a href="#about">More about me ↓</a></div>
         </div>
+        <div class="hero-art" aria-label="Decorative code illustration">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="code-window">
+            <div class="window-top"><div class="window-dots"><i></i><i></i><i></i></div><span>hello_world.java</span><span>•••</span></div>
+            <div class="code-lines">
+              <p><span class="line-no">01</span> <span class="purple">public class</span> <span class="green">Developer</span> {</p>
+              <p><span class="line-no">02</span> &nbsp; <span class="purple">public static void</span> <span class="blue">main</span>() {</p>
+              <p><span class="line-no">03</span> &nbsp;&nbsp;&nbsp; String goal =</p>
+              <p><span class="line-no">04</span> &nbsp;&nbsp;&nbsp; <span class="orange">"Build something great";</span></p>
+              <p><span class="line-no">05</span> &nbsp;&nbsp;&nbsp; <span class="green">keepLearning</span>();</p>
+              <p><span class="line-no">06</span> &nbsp; }</p><p><span class="line-no">07</span> }</p>
+            </div>
+            <div class="window-footer"><span><i></i> Ready to build</span><span>UTF-8&nbsp; • &nbsp;Java</span></div>
+          </div>
+          <div class="floating-chip chip-top">✦ Creative thinking</div><div class="floating-chip chip-bottom">{" "} &lt;/&gt; Learning by doing</div>
+          <div class="hero-star star-one">✳</div><div class="hero-star star-two">✦</div>
+        </div>
+      </div>
+      <div class="container hero-bottom"><span>SCROLL TO EXPLORE</span><div class="scroll-line"></div><span>01 / 05</span></div>
     </section>
 
-    <section id="about" class="section">
-        <div class="container">
-            <p class="section-number">01</p>
-            <h2 class="section-title">About Me</h2>
-            <div class="content-card">
-                <h3>Who I Am</h3>
-                <p>
-                    I am Joshua Pablo, a second-year Bachelor of Science
-                    in Technology student from Nueva Vizcaya, Philippines.
-                    I am interested in programming and game development,
-                    and I want to improve my skills through practice,
-                    projects, and continuous learning.
-                </p>
-                <p>
-                    Outside academics, I enjoy playing chess, cycling,
-                    and playing Mobile Legends. These activities help
-                    me develop strategic thinking, patience, and
-                    problem-solving skills.
-                </p>
-                <h3>My Goal</h3>
-                <p>
-                    My goal is to become a successful game programmer
-                    and develop games that people can enjoy. I am
-                    committed to learning new technologies and improving
-                    my abilities as I continue my studies.
-                </p>
-            </div>
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-heading"><p class="eyebrow">A LITTLE ABOUT ME</p><h2>Curious mind. <span class="gradient-text">Growing every day.</span></h2><p class="section-intro">I'm at the beginning of my tech journey, building my skills one project and one challenge at a time.</p></div>
+        <div class="about-grid">
+          <article class="about-card about-main"><div class="card-icon">✦</div><h3>My story</h3><p>I'm Joshua Pablo, a first-year Bachelor of Science in Technology student from Nueva Vizcaya, Philippines. I enjoy chess, cycling, and Mobile Legends. These interests help me practice strategy, patience, and creative problem-solving.</p><p>My goal is to become a successful game programmer. For now, I'm focused on strengthening my programming fundamentals, learning new tools, and turning what I learn into useful projects.</p><blockquote>“Don't stop when you tired, Stop when your done.”</blockquote></article>
+          <article class="about-card education-card"><div class="card-icon">⌘</div><p class="card-label">EDUCATION</p><h3>BS Technology</h3><p>First-year college student</p><div class="card-divider"></div><p class="card-label">LOCATION</p><h3>Nueva Vizcaya</h3><p>Philippines</p><div class="card-divider"></div><p class="card-label">CAREER GOAL</p><h3>Game Programmer</h3><p>Creating interactive experiences through code.</p></article>
         </div>
+      </div>
     </section>
 
-    <section id="skills" class="section">
-        <div class="container">
-            <p class="section-number">02</p>
-            <h2 class="section-title">Skills</h2>
-
-            <div class="content-card">
-                <h3>Programming Languages</h3>
-                <div class="skill-tags">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>Java</span>
-                    <span>JavaScript</span>
-                    <span>SQL</span>
-                </div>
-            </div>
-
-            <div class="content-card">
-                <h3>Tools and Technologies</h3>
-                <div class="skill-tags">
-                    <span>VS Code</span>
-                    <span>Git</span>
-                    <span>GitHub</span>
-                    <span>GitHub Pages</span>
-                    <span>JSON</span>
-                    <span>REST API</span>
-                </div>
-            </div>
-
-            <div class="content-card">
-                <h3>Soft Skills</h3>
-                <div class="skill-tags">
-                    <span>Problem Solving</span>
-                    <span>Critical Thinking</span>
-                    <span>Teamwork</span>
-                    <span>Communication</span>
-                    <span>Willingness to Learn</span>
-                    <span>Time Management</span>
-                </div>
-            </div>
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-heading"><p class="eyebrow">WHAT I'M BUILDING</p><h2>Skills & <span class="gradient-text">toolkit.</span></h2><p class="section-intro">A growing set of technical and personal skills I'm developing through coursework and practice.</p></div>
+        <div class="skills-grid">
+          <article class="skill-card"><div class="skill-icon">⌨</div><h3>Web Development</h3><p>Learning to build clean, responsive web pages.</p><div class="tag-list"><span>HTML</span><span>CSS</span><span>JavaScript</span></div></article>
+          <article class="skill-card"><div class="skill-icon">{"{}"}</div><h3>Programming</h3><p>Practicing programming logic and problem-solving.</p><div class="tag-list"><span>Java basics</span><span>Algorithms</span></div></article>
+          <article class="skill-card"><div class="skill-icon">◈</div><h3>Tools & Platforms</h3><p>Getting familiar with the tools developers use.</p><div class="tag-list"><span>Git</span><span>GitHub</span><span>VS Code</span></div></article>
+          <article class="skill-card"><div class="skill-icon">✧</div><h3>Personal Skills</h3><p>Bringing a thoughtful and persistent approach to tasks.</p><div class="tag-list"><span>Critical thinking</span><span>Adaptability</span><span>Teamwork</span></div></article>
         </div>
+        <p class="skills-note">Skills shown reflect my current learning areas and will grow as I complete more projects.</p>
+      </div>
     </section>
 
-    <section id="projects" class="section">
-        <div class="container">
-            <p class="section-number">03</p>
-            <h2 class="section-title">Projects</h2>
-
-            <div class="content-card">
-                <h3>Personal Portfolio Website</h3>
-                <p>
-                    A personal website that introduces my background,
-                    skills, interests, and development journey as a
-                    technology student.
-                </p>
-                <p class="project-tech">HTML · CSS · JavaScript · GitHub Pages</p>
-                <a href="https://joshua-pablo.github.io"
-                   target="_blank" rel="noopener noreferrer">
-                    Visit Website →
-                </a>
-            </div>
-
-            <div class="content-card">
-                <h3>Java Programming Activities</h3>
-                <p>
-                    Programming exercises created to practice Java
-                    fundamentals, logical thinking, and problem-solving.
-                </p>
-                <p class="project-tech">Java · VS Code</p>
-            </div>
-
-            <div class="content-card">
-                <h3>Future Game Development Projects</h3>
-                <p>
-                    I plan to create game projects as I continue
-                    developing my programming knowledge and skills.
-                </p>
-                <p class="project-tech">Programming · Game Development</p>
-            </div>
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-heading section-heading-row"><div><p class="eyebrow">SELECTED WORK</p><h2>Projects & <span class="gradient-text">practice.</span></h2><p class="section-intro">Small steps that help me learn by building. Replace sample entries with your actual completed work.</p></div><span class="project-count">01 — 03</span></div>
+        <div class="projects-grid" id="projectsGrid"><p class="loading-message">Loading projects…</p></div>
+        <div class="github-panel">
+          <div class="github-panel-heading"><div><p class="eyebrow">FROM MY GITHUB</p><h3>Recently updated repositories</h3></div><a class="text-link" href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank" rel="noreferrer">View GitHub ↗</a></div>
+          <div id="githubRepos" class="repo-list"><p class="loading-message">Fetching public repositories…</p></div>
         </div>
+      </div>
     </section>
 
-    <section id="contact" class="section">
-        <div class="container">
-            <p class="section-number">04</p>
-            <h2 class="section-title">Contact</h2>
-
-            <div class="content-card">
-                <h3>Let's Connect</h3>
-                <p>
-                    I'm open to learning opportunities, collaborations,
-                    and connecting with people who share an interest
-                    in technology and programming.
-                </p>
-                <p><strong>GitHub:</strong>
-                    <a href="https://github.com/joshua-pablo"
-                       target="_blank" rel="noopener noreferrer">
-                        github.com/joshua-pablo
-                    </a>
-                </p>
-            </div>
-
-            <div class="content-card">
-                <h3>Send a Message</h3>
-                <form action="https://formsubmit.co/YOUR_EMAIL@example.com"
-                      method="POST">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name"
-                           placeholder="Your name" required>
-
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email"
-                           placeholder="you@example.com" required>
-
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message"
-                              placeholder="How can I help?"
-                              rows="6" required></textarea>
-
-                    <button type="submit" class="btn">Send Message</button>
-                </form>
-            </div>
-        </div>
+    <section class="section contact-section" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-copy"><p class="eyebrow">LET'S TALK</p><h2>Have an idea?<br><span class="gradient-text">Let's connect.</span></h2><p class="section-intro">I'm open to learning opportunities, student collaborations, and conversations about technology and game development.</p><div class="contact-links"><a href="mailto:YOUR_EMAIL@example.com"><span class="contact-link-icon">✉</span><span><small>EMAIL ME</small><strong>YOUR_EMAIL@example.com</strong></span><span>↗</span></a><a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank" rel="noreferrer"><span class="contact-link-icon">⌘</span><span><small>GITHUB</small><strong>github.com/YOUR_GITHUB_USERNAME</strong></span><span>↗</span></a></div></div>
+        <form class="contact-form" id="contactForm" novalidate><div class="form-top"><span class="form-dot"></span><span class="form-dot"></span><span class="form-dot"></span><p>Send a message</p></div><label for="name">Your name</label><input id="name" name="name" type="text" placeholder="e.g. Alex Santos" required minlength="2"><label for="email">Email address</label><input id="email" name="email" type="email" placeholder="you@example.com" required><label for="message">Message</label><textarea id="message" name="message" rows="4" placeholder="Tell me what you have in mind..." required minlength="5"></textarea><button class="button button-primary form-submit" type="submit">Send message <span>↗</span></button><p id="formStatus" class="form-status" role="status">Demo form only — it won't send or store your message.</p></form>
+      </div>
     </section>
-</main>
+  </main>
 
-<footer class="site-footer">
-    <div class="container">
-        <p>© 2026 Joshua Pablo. Built with HTML, CSS, and JavaScript.</p>
-    </div>
-</footer>
-
-<script src="js/script.js"></script>
+  <footer class="site-footer"><div class="container footer-inner"><a class="brand" href="#home"><span class="brand-mark">JP</span><span>Joshua Pablo<span class="brand-dot">.</span></span></a><p>Designed & built while learning, one line at a time.</p><a href="#home" class="back-top">Back to top ↑</a><span class="copyright">© <span id="year"></span> Joshua Pablo</span></div></footer>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
 </body>
 </html>
-```

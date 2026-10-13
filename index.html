@@ -1,474 +1,208 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Joshua Pablo | Portfolio</title>
-<style>
-:root {
-  --dark: #073e46;
-  --teal: #087985;
-  --cyan: #00d5df;
-  --bg: #a2f4f4;
-  --card: #e4fbfc;
-  --text: #103943;
-  --muted: #47747d;
-}
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; scroll-padding-top: 85px; }
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(135deg, #a9f7f5, #81e9ed);
-  color: var(--text);
-  line-height: 1.65;
-}
-a { color: var(--teal); }
-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: linear-gradient(100deg, #07383e, #09636b);
-  color: white;
-  box-shadow: 0 4px 18px #06444b20;
-}
-nav {
-  max-width: 1150px;
-  margin: auto;
-  padding: 13px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.logo {
-  color: var(--cyan);
-  font-size: 28px;
-  font-weight: 900;
-  text-decoration: none;
-}
-.nav-links {
-  display: flex;
-  gap: 22px;
-  align-items: center;
-}
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: bold;
-}
-.nav-links a:hover { color: var(--cyan); }
-.menu-btn {
-  display: none;
-  background: transparent;
-  color: white;
-  border: 1px solid #8bdce0;
-  border-radius: 50%;
-  width: 42px;
-  height: 42px;
-  font-size: 22px;
-}
-main { max-width: 1150px; margin: auto; padding: 28px 24px; }
-.hero {
-  display: grid;
-  grid-template-columns: 230px 1fr;
-  align-items: center;
-  gap: 30px;
-  background: var(--card);
-  padding: 32px;
-  border-radius: 18px;
-  margin-bottom: 28px;
-}
-.profile {
-  width: 190px;
-  height: 190px;
-  border-radius: 50%;
-  object-fit: cover;
-  background: #c5eeee;
-  border: 5px solid white;
-  margin: auto;
-  display: block;
-}
-.eyebrow {
-  color: var(--teal);
-  font-weight: bold;
-  letter-spacing: 2px;
-  font-size: 13px;
-}
-h1 { font-size: clamp(32px, 5vw, 48px); line-height: 1.2; }
-.hero h2 { color: var(--teal); font-size: 23px; margin: 6px 0 10px; }
-.hero p { max-width: 680px; }
-.actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 20px 0; }
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 30px;
-  background: var(--teal);
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  border: 1px solid var(--teal);
-}
-.btn.outline { background: transparent; color: var(--teal); }
-.tags { display: flex; flex-wrap: wrap; gap: 8px; }
-.tag {
-  background: #c9f6f7;
-  color: var(--teal);
-  padding: 6px 13px;
-  border-radius: 30px;
-  font-size: 13px;
-}
-section { margin: 28px 0; }
-.section-title { margin-bottom: 18px; }
-.section-title small { color: var(--teal); letter-spacing: 4px; font-weight: bold; }
-.section-title h2 { font-size: 30px; line-height: 1.3; }
-.section-title h2::after {
-  content: "";
-  display: block;
-  width: 65px;
-  height: 5px;
-  margin-top: 8px;
-  border-radius: 8px;
-  background: linear-gradient(90deg, var(--teal), var(--cyan));
-}
-.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-.card {
-  background: var(--card);
-  border: 1px solid #b9e7e9;
-  border-radius: 18px;
-  padding: 24px;
-  box-shadow: 0 8px 25px #075a6010;
-  min-width: 0;
-}
-.card h3 { color: var(--teal); font-size: 20px; margin-bottom: 12px; }
-.card p { margin-bottom: 10px; }
-.education { display: flex; gap: 20px; align-items: center; }
-.edu-icon { font-size: 35px; }
-.edu-badge {
-  margin-left: auto;
-  background: #c9f6f7;
-  color: var(--teal);
-  padding: 8px 14px;
-  border-radius: 30px;
-  font-size: 12px;
-  font-weight: bold;
-  white-space: nowrap;
-}
-.skill { margin: 15px 0; }
-.skill-label { display: flex; justify-content: space-between; gap: 10px; margin-bottom: 7px; }
-.bar { height: 10px; background: #c5e1e3; border-radius: 20px; overflow: hidden; }
-.bar span {
-  display: block;
-  height: 100%;
-  background: linear-gradient(90deg, var(--teal), var(--cyan));
-  border-radius: 20px;
-}
-.pills { display: flex; flex-wrap: wrap; gap: 9px; }
-.pill {
-  border: 1px solid #91cfd4;
-  background: #f1ffff;
-  color: var(--teal);
-  padding: 7px 14px;
-  border-radius: 30px;
-}
-.project-card { display: flex; flex-direction: column; align-items: flex-start; }
-.project-card .tags { margin: 10px 0; }
-.project-link { font-weight: bold; text-decoration: none; margin-top: auto; }
-.github-strip {
-  background: var(--card);
-  border-radius: 16px;
-  padding: 18px 22px;
-  margin-top: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-.contact-grid { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 16px; }
-.contact-line { margin: 14px 0; overflow-wrap: anywhere; }
-form label { display: block; font-weight: bold; margin: 10px 0 5px; }
-form input, form textarea {
-  width: 100%;
-  padding: 12px;
-  font: inherit;
-  color: var(--text);
-  background: #f7ffff;
-  border: 1px solid #b7d9dc;
-  border-radius: 10px;
-  outline-color: var(--teal);
-}
-form textarea { min-height: 125px; resize: vertical; }
-form button { cursor: pointer; margin-top: 14px; }
-footer {
-  text-align: center;
-  padding: 25px;
-  color: white;
-  background: linear-gradient(100deg, #07383e, #09636b);
-}
-footer strong { color: var(--cyan); }
-@media (max-width: 760px) {
-  nav { padding: 10px 20px; }
-  .menu-btn { display: block; }
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: 62px;
-    left: 0;
-    right: 0;
-    background: var(--dark);
-    padding: 20px;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .nav-links.open { display: flex; }
-  main { padding: 18px 16px; }
-  .hero { grid-template-columns: 1fr; text-align: center; padding: 24px 18px; gap: 18px; }
-  .profile { width: 150px; height: 150px; }
-  .actions, .tags { justify-content: center; }
-  .grid, .contact-grid { grid-template-columns: 1fr; }
-  .education { align-items: flex-start; flex-wrap: wrap; }
-  .edu-badge { margin-left: 0; }
-  .section-title h2 { font-size: 27px; }
-  .card { padding: 21px; }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joshua Pablo | Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<header>
-  <nav>
-    <a class="logo" href="#home">JP.</a>
-    <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
-    <div class="nav-links" id="navLinks">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#education">Education</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+<header class="site-header">
+    <div class="container nav-container">
+        <a href="#home" class="logo">JP<span>.</span></a>
+        <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </div>
-  </nav>
 </header>
 
 <main>
-  <section class="hero" id="home">
-    <div>
-      <img class="profile" src="images/profile.jpg" alt="Joshua Pablo"
-           onerror="this.style.display='none'">
-    </div>
-    <div>
-      <p class="eyebrow">HELLO, I'M</p>
-      <h1>Joshua Pablo</h1>
-      <h2>Aspiring Game Programmer</h2>
-      <p>I'm a second-year BS Technology student from Nueva Vizcaya. I enjoy chess, cycling, Mobile Legends, and learning how programming can turn ideas into useful applications and games.</p>
-      <div class="actions">
-        <a class="btn" href="#projects">View My Projects</a>
-        <a class="btn outline" href="#contact">Contact Me</a>
-      </div>
-      <div class="tags">
-        <span class="tag">BS Technology · 2nd Year</span>
-        <span class="tag">Future Game Programmer</span>
-      </div>
-    </div>
-  </section>
-
-  <section id="about">
-    <div class="section-title"><h2>About Me</h2></div>
-    <div class="grid">
-      <article class="card">
-        <h3>Biography</h3>
-        <p>I am Joshua Pablo, a college student pursuing a Bachelor of Science in Technology. I am interested in programming, game development, and discovering how technology can solve problems.</p>
-      </article>
-      <article class="card">
-        <h3>My Interests</h3>
-        <p>I enjoy chess, cycling, and Mobile Legends. I also like exploring technology and learning new programming concepts that can help me improve my skills.</p>
-      </article>
-      <article class="card">
-        <h3>Career Goals</h3>
-        <p>My goal is to strengthen my programming skills, create useful applications and games, gain experience, and eventually become a successful game programmer.</p>
-      </article>
-    </div>
-  </section>
-
-  <section id="education">
-    <div class="section-title"><h2>Education</h2></div>
-    <article class="card education">
-      <div class="edu-icon">🎓</div>
-      <div>
-        <h3>Bachelor of Science in Technology</h3>
-        <p>Second Year · College</p>
-        <p>Building my knowledge of technology, programming, logical thinking, and problem-solving while preparing for a future in game development.</p>
-      </div>
-      <span class="edu-badge">CURRENTLY STUDYING</span>
-    </article>
-  </section>
-
-  <section id="skills">
-    <div class="section-title"><h2>Skills</h2></div>
-    <div class="grid">
-      <article class="card">
-        <h3>Programming Languages</h3>
-        <div class="skill">
-          <div class="skill-label"><span>HTML</span><span>70%</span></div>
-          <div class="bar"><span style="width:70%"></span></div>
+    <section id="home" class="hero container">
+        <div class="hero-copy">
+            <p class="eyebrow">HELLO, I'M</p>
+            <h1>Joshua <span>Pablo</span></h1>
+            <h2>Aspiring Game Programmer</h2>
+            <p>
+                I'm a second-year BS Technology student who enjoys
+                learning programming, solving problems, and exploring
+                how technology can be used to create games and useful applications.
+            </p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn">View My Projects</a>
+                <a href="#contact" class="btn btn-outline">Contact Me</a>
+            </div>
         </div>
-        <div class="skill">
-          <div class="skill-label"><span>CSS</span><span>60%</span></div>
-          <div class="bar"><span style="width:60%"></span></div>
-        </div>
-        <div class="skill">
-          <div class="skill-label"><span>JavaScript</span><span>50%</span></div>
-          <div class="bar"><span style="width:50%"></span></div>
-        </div>
-        <div class="skill">
-          <div class="skill-label"><span>Java</span><span>40%</span></div>
-          <div class="bar"><span style="width:40%"></span></div>
-        </div>
-        <p><small>Adjust these levels to match your actual skills.</small></p>
-      </article>
+    </section>
 
-      <article class="card">
-        <h3>Tools and Technologies</h3>
-        <div class="pills">
-          <span class="pill">VS Code</span>
-          <span class="pill">Git</span>
-          <span class="pill">GitHub</span>
-          <span class="pill">GitHub Pages</span>
-          <span class="pill">JSON</span>
-          <span class="pill">REST API</span>
+    <section id="about" class="section">
+        <div class="container">
+            <p class="section-number">01</p>
+            <h2 class="section-title">About Me</h2>
+            <div class="content-card">
+                <h3>Who I Am</h3>
+                <p>
+                    I am Joshua Pablo, a second-year Bachelor of Science
+                    in Technology student from Nueva Vizcaya, Philippines.
+                    I am interested in programming and game development,
+                    and I want to improve my skills through practice,
+                    projects, and continuous learning.
+                </p>
+                <p>
+                    Outside academics, I enjoy playing chess, cycling,
+                    and playing Mobile Legends. These activities help
+                    me develop strategic thinking, patience, and
+                    problem-solving skills.
+                </p>
+                <h3>My Goal</h3>
+                <p>
+                    My goal is to become a successful game programmer
+                    and develop games that people can enjoy. I am
+                    committed to learning new technologies and improving
+                    my abilities as I continue my studies.
+                </p>
+            </div>
         </div>
-      </article>
+    </section>
 
-      <article class="card">
-        <h3>Soft Skills</h3>
-        <div class="pills">
-          <span class="pill">Teamwork</span>
-          <span class="pill">Communication</span>
-          <span class="pill">Time Management</span>
-          <span class="pill">Problem Solving</span>
-          <span class="pill">Willingness to Learn</span>
-          <span class="pill">Critical Thinking</span>
+    <section id="skills" class="section">
+        <div class="container">
+            <p class="section-number">02</p>
+            <h2 class="section-title">Skills</h2>
+
+            <div class="content-card">
+                <h3>Programming Languages</h3>
+                <div class="skill-tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>Java</span>
+                    <span>JavaScript</span>
+                    <span>SQL</span>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h3>Tools and Technologies</h3>
+                <div class="skill-tags">
+                    <span>VS Code</span>
+                    <span>Git</span>
+                    <span>GitHub</span>
+                    <span>GitHub Pages</span>
+                    <span>JSON</span>
+                    <span>REST API</span>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h3>Soft Skills</h3>
+                <div class="skill-tags">
+                    <span>Problem Solving</span>
+                    <span>Critical Thinking</span>
+                    <span>Teamwork</span>
+                    <span>Communication</span>
+                    <span>Willingness to Learn</span>
+                    <span>Time Management</span>
+                </div>
+            </div>
         </div>
-      </article>
-    </div>
-  </section>
+    </section>
 
-  <section id="projects">
-    <div class="section-title"><h2>Projects</h2></div>
-    <p style="margin-bottom:15px">Here are some of my learning projects and goals.</p>
-    <div class="grid">
-      <article class="card project-card">
-        <h3>Personal Portfolio</h3>
-        <p>A website that introduces my background, skills, interests, and goals.</p>
-        <div class="tags">
-          <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">GitHub Pages</span>
+    <section id="projects" class="section">
+        <div class="container">
+            <p class="section-number">03</p>
+            <h2 class="section-title">Projects</h2>
+
+            <div class="content-card">
+                <h3>Personal Portfolio Website</h3>
+                <p>
+                    A personal website that introduces my background,
+                    skills, interests, and development journey as a
+                    technology student.
+                </p>
+                <p class="project-tech">HTML · CSS · JavaScript · GitHub Pages</p>
+                <a href="https://joshua-pablo.github.io"
+                   target="_blank" rel="noopener noreferrer">
+                    Visit Website →
+                </a>
+            </div>
+
+            <div class="content-card">
+                <h3>Java Programming Activities</h3>
+                <p>
+                    Programming exercises created to practice Java
+                    fundamentals, logical thinking, and problem-solving.
+                </p>
+                <p class="project-tech">Java · VS Code</p>
+            </div>
+
+            <div class="content-card">
+                <h3>Future Game Development Projects</h3>
+                <p>
+                    I plan to create game projects as I continue
+                    developing my programming knowledge and skills.
+                </p>
+                <p class="project-tech">Programming · Game Development</p>
+            </div>
         </div>
-        <a class="project-link" href="https://github.com/joshua-pablo/joshua-pablo.github.io" target="_blank" rel="noopener">View Repository ↗</a>
-      </article>
+    </section>
 
-      <article class="card project-card">
-        <h3>Java Practice Programs</h3>
-        <p>Programming exercises that help me practice logic, input handling, and problem-solving.</p>
-        <div class="tags">
-          <span class="tag">Java</span><span class="tag">Programming</span>
+    <section id="contact" class="section">
+        <div class="container">
+            <p class="section-number">04</p>
+            <h2 class="section-title">Contact</h2>
+
+            <div class="content-card">
+                <h3>Let's Connect</h3>
+                <p>
+                    I'm open to learning opportunities, collaborations,
+                    and connecting with people who share an interest
+                    in technology and programming.
+                </p>
+                <p><strong>GitHub:</strong>
+                    <a href="https://github.com/joshua-pablo"
+                       target="_blank" rel="noopener noreferrer">
+                        github.com/joshua-pablo
+                    </a>
+                </p>
+            </div>
+
+            <div class="content-card">
+                <h3>Send a Message</h3>
+                <form action="https://formsubmit.co/YOUR_EMAIL@example.com"
+                      method="POST">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name"
+                           placeholder="Your name" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email"
+                           placeholder="you@example.com" required>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message"
+                              placeholder="How can I help?"
+                              rows="6" required></textarea>
+
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
         </div>
-        <p><small>Learning in progress</small></p>
-      </article>
-
-      <article class="card project-card">
-        <h3>Game Development</h3>
-        <p>My future goal is to create games that are enjoyable, creative, and engaging for players.</p>
-        <div class="tags">
-          <span class="tag">Game Design</span><span class="tag">Programming</span>
-        </div>
-        <p><small>Future project</small></p>
-      </article>
-    </div>
-    <div class="github-strip">
-      <div>
-        <h3>My GitHub</h3>
-        <p>Explore my code and follow my progress as I learn.</p>
-      </div>
-      <a class="project-link" href="https://github.com/joshua-pablo" target="_blank" rel="noopener">github.com/joshua-pablo ↗</a>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="section-title"><h2>Contact</h2></div>
-    <div class="contact-grid">
-      <article class="card">
-        <h3>Let's Connect</h3>
-        <p>I'm open to learning opportunities and connecting with people who share an interest in technology and programming.</p>
-        <div class="contact-line">
-          <strong>GitHub</strong><br>
-          <a href="https://github.com/joshua-pablo" target="_blank" rel="noopener">github.com/joshua-pablo</a>
-        </div>
-        <div class="contact-line">
-          <strong>Email</strong><br>
-          <a href="mailto:joshua.pablo@example.com">joshua.pablo@example.com</a>
-        </div>
-        <p><small>Replace the sample email with your real email address.</small></p>
-      </article>
-
-      <article class="card">
-        <h3>Send a Message</h3>
-        <form id="contactForm">
-          <label for="name">Name</label>
-          <input id="name" name="name" type="text" placeholder="Your name" required>
-
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" placeholder="you@example.com" required>
-
-          <label for="message">Message</label>
-          <textarea id="message" name="message" placeholder="How can I help?" required></textarea>
-
-          <button class="btn" type="submit">Send Message</button>
-        </form>
-        <p><small>The form will open your email app to send the message. It does not send directly from the website.</small></p>
-      </article>
-    </div>
-  </section>
+    </section>
 </main>
 
-<footer>
-  <p><strong>JP.</strong></p>
-  <p>Designed and built by Joshua Pablo.</p>
-  <p>© 2026 Joshua Pablo</p>
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2026 Joshua Pablo. Built with HTML, CSS, and JavaScript.</p>
+    </div>
 </footer>
 
-<script>
-const menuBtn = document.getElementById("menuBtn");
-const navLinks = document.getElementById("navLinks");
-
-menuBtn.addEventListener("click", function () {
-  const isOpen = navLinks.classList.toggle("open");
-  menuBtn.setAttribute("aria-expanded", isOpen);
-});
-
-document.querySelectorAll(".nav-links a").forEach(function (link) {
-  link.addEventListener("click", function () {
-    navLinks.classList.remove("open");
-    menuBtn.setAttribute("aria-expanded", "false");
-  });
-});
-
-document.getElementById("contactForm").addEventListener("submit", function (event) {
-  event.preventDefault();
-
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const message = document.getElementById("message").value.trim();
-
-  const recipient = "joshua.pablo@example.com";
-  const subject = encodeURIComponent("Portfolio message from " + name);
-  const body = encodeURIComponent(
-    "Name: " + name + "\nEmail: " + email + "\n\nMessage:\n" + message
-  );
-
-  window.location.href = "mailto:" + recipient + "?subject=" + subject + "&body=" + body;
-});
-</script>
-
+<script src="js/script.js"></script>
 </body>
 </html>
+```

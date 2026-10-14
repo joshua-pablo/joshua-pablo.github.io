@@ -425,6 +425,41 @@ header {
     margin-bottom: 5px;
 }
 
+/* Quote Card Styles */
+.quote-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: var(--shadow);
+    margin-bottom: 32px;
+}
+
+.quote-card h3 {
+    font: 700 21px "Outfit", sans-serif;
+    color: var(--navy);
+    margin-bottom: 16px;
+}
+
+.quote-box {
+    border-left: 4px solid var(--teal);
+    padding-left: 20px;
+    margin: 10px 0;
+    font-style: italic;
+    color: var(--text);
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.quote-author {
+    display: block;
+    margin-top: 10px;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--teal);
+    font-size: 14px;
+}
+
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -847,7 +882,7 @@ footer {
 
     <div class="hero-content">
         <span class="eyebrow">Hello, I'm</span>
-        <h1>Joshua<span>V.<span>Pablo.</span></h1>
+        <h1>Joshua V.<span>Pablo.</span></h1>
         <h2>Aspiring Game Programmer | BS Information Technology Student</h2>
 
         <p class="description">
@@ -939,23 +974,39 @@ footer {
     <div class="container">
         <div class="section-heading">
             <p class="section-number">02 / MY JOURNEY</p>
-            <h2 class="section-title">Education</h2>
+            <h2 class="section-title">Educational Background</h2>
             <p class="section-subtitle">
                 My educational background and ongoing learning journey.
             </p>
         </div>
 
+        <!-- Favorite Quote Section -->
+        <div class="quote-card">
+            <h3>Favorite Quote</h3>
+            <blockquote class="quote-box">
+                "Don't stop when you're tired, stop when you're done."
+                <span class="quote-author">- Joshua V. Pablo</span>
+            </blockquote>
+        </div>
+
         <article class="card education-card">
             <div class="education-item">
-                <span class="date">CURRENT</span>
+                <span class="date">NOW · EXPECTED 2029</span>
                 <h4>Bachelor of Science in Information Technology</h4>
-                <p>College · Second Year</p>
-                <p>Developing my understanding of programming, computer technology, and problem-solving.</p>
+                <p>Nueva Vizcaya State University · Second Year</p>
             </div>
             <div class="education-item">
-                <span class="date">PREVIOUS EDUCATION</span>
-                <h4>Senior High School</h4>
-                <p>Building the academic foundation that prepared me for college and further learning.</p>
+                <span class="date">GRADUATED 2025</span>
+                <h4>Senior High School (ABM Strand, with honors)</h4>
+                <p>Bambang National High School</p>
+            </div>
+            <div class="education-item">
+                <span class="date">HIGH SCHOOL</span>
+                <h4>Munguia National High School</h4>
+            </div>
+            <div class="education-item">
+                <span class="date">ELEMENTARY</span>
+                <h4>Munguia Elementary School</h4>
             </div>
         </article>
     </div>

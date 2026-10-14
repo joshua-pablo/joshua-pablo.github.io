@@ -353,6 +353,31 @@ header {
     font-size: 13px;
 }
 
+/* Background & Goals Styles */
+.detail-block {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border);
+}
+
+.detail-block:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.detail-block h4 {
+    font: 700 16px "Outfit", sans-serif;
+    color: var(--navy);
+    margin-bottom: 6px;
+}
+
+.detail-block p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
 .education-card {
     position: relative;
     padding-left: 31px;
@@ -769,6 +794,7 @@ footer {
         <nav class="nav-links" aria-label="Main navigation">
             <a href="#home">Home</a>
             <a href="#about">About</a>
+            <a href="#background">Background</a>
             <a href="#quote">Quote</a>
             <a href="#education">Education</a>
             <a href="#skills">Skills</a>
@@ -877,7 +903,63 @@ footer {
     </div>
 </section>
 
-<!-- SEPARATE FAVORITE QUOTE SECTION -->
+<!-- PERSONAL BACKGROUND & CAREER GOALS SECTION -->
+<section class="section" id="background">
+    <div class="container">
+        <div class="section-heading">
+            <p class="section-number">02 / PERSONAL DETAILS</p>
+            <h2 class="section-title">Personal Background & Career Goals</h2>
+            <p class="section-subtitle">
+                More details about my goals, background, and personal stats.
+            </p>
+        </div>
+
+        <article class="card" style="margin-bottom: 22px;">
+            <div class="detail-block">
+                <h4>Career Goals</h4>
+                <p>To become a successful game programmer, build interactive and engaging games, apply what I learn in class to real development projects, and master game design frameworks.</p>
+            </div>
+            <div class="detail-block">
+                <h4>Interests & Hobbies</h4>
+                <p>Chess, Cycling, Mobile Legends, Strategy Planning, and Game Development Exploration.</p>
+            </div>
+            <div class="detail-block">
+                <h4>Age & Birthday</h4>
+                <p>20 years old (Born October 24, 2005 - *you may update your actual birthdate*)</p>
+            </div>
+            <div class="detail-block">
+                <h4>Physical Stats</h4>
+                <p>Male | Height & Build fit for active cycling and outdoor sports.</p>
+            </div>
+            <div class="detail-block">
+                <h4>Citizenship & Status</h4>
+                <p>Filipino | Single</p>
+            </div>
+        </article>
+
+        <!-- FAMILY DETAILS -->
+        <div class="section-heading" style="margin-top: 40px; margin-bottom: 20px;">
+            <h3 class="section-title" style="font-size: 26px;">Family Details</h3>
+        </div>
+
+        <article class="card">
+            <div class="detail-block">
+                <h4>Father's Name</h4>
+                <p>Father's Name (Occupation)</p>
+            </div>
+            <div class="detail-block">
+                <h4>Mother's Name</h4>
+                <p>Mother's Name (Occupation)</p>
+            </div>
+            <div class="detail-block">
+                <h4>Sibling / Family Info</h4>
+                <p>Family member details</p>
+            </div>
+        </article>
+    </div>
+</section>
+
+<!-- FAVORITE QUOTE SECTION -->
 <section class="section" id="quote">
     <div class="container">
         <div class="quote-card">
@@ -890,11 +972,11 @@ footer {
     </div>
 </section>
 
-<!-- SEPARATE EDUCATIONAL BACKGROUND SECTION -->
+<!-- EDUCATIONAL BACKGROUND SECTION -->
 <section class="section" id="education">
     <div class="container">
         <div class="section-heading">
-            <p class="section-number">02 / MY JOURNEY</p>
+            <p class="section-number">03 / MY JOURNEY</p>
             <h2 class="section-title">Educational Background</h2>
             <p class="section-subtitle">
                 My educational background and ongoing learning journey.
@@ -926,7 +1008,7 @@ footer {
 <section class="section" id="skills">
     <div class="container">
         <div class="section-heading">
-            <p class="section-number">03 / WHAT I AM LEARNING</p>
+            <p class="section-number">04 / WHAT I AM LEARNING</p>
             <h2 class="section-title">Skills & Technologies</h2>
             <p class="section-subtitle">
                 The technical areas and tools I am learning and exploring.
@@ -980,7 +1062,7 @@ footer {
 <section class="section" id="interests">
     <div class="container">
         <div class="section-heading">
-            <p class="section-number">04 / BEYOND THE CLASSROOM</p>
+            <p class="section-number">05 / BEYOND THE CLASSROOM</p>
             <h2 class="section-title">Interests & Hobbies</h2>
             <p class="section-subtitle">Activities that keep me motivated, curious, and challenged.</p>
         </div>
@@ -1008,7 +1090,7 @@ footer {
 <section class="section" id="projects">
     <div class="container">
         <div class="section-heading">
-            <p class="section-number">05 / MY WORK</p>
+            <p class="section-number">06 / MY WORK</p>
             <h2 class="section-title">Projects</h2>
             <p class="section-subtitle">Academic work and personal projects that represent my development as a technology student.</p>
         </div>
@@ -1060,7 +1142,7 @@ footer {
 <section class="section" id="contact">
     <div class="container">
         <div class="section-heading">
-            <p class="section-number">06 / LET'S CONNECT</p>
+            <p class="section-number">07 / LET'S CONNECT</p>
             <h2 class="section-title">Contact Me</h2>
             <p class="section-subtitle">Have an opportunity, suggestion, or idea? Feel free to connect.</p>
         </div>

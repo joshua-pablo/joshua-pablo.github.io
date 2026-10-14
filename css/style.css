@@ -1,4 +1,110 @@
-```css
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#073f46">
+<meta name="description" content="Joshua Pablo's personal portfolio showcasing his education, skills, projects, and journey as an aspiring developer.">
+<title>Joshua Pablo | Personal Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --navy: #073f46;
+    --teal: #087f8c;
+    --cyan: #39d5c1;
+    --background: #e9f8f6;
+    --white: #ffffff;
+    --text: #183d42;
+    --muted: #678084;
+    --border: #dcece9;
+    --shadow: 0 12px 35px rgba(7, 63, 70, .08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button, input, textarea {
+    font: inherit;
+}
+
+.container {
+    width: min(1120px, 90%);
+    margin: auto;
+}
+
+header {
+    background: var(--navy);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,.1);
+}
+
+.navbar {
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font: 800 30px "Outfit", sans-serif;
+    letter-spacing: -1px;
+}
+
+.logo span,
+.footer-logo span {
+    color: var(--cyan);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-links a {
+    color: #d9efed;
+    font-size: 14px;
+    font-weight: 600;
+    transition: .25s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--cyan);
+}
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    color: white;
+    border: 0;
+    font-size: 28px;
+    cursor: pointer;
+}
+
 /* HERO SECTION ALIGNMENT */
 .hero {
   width: 100%;
@@ -41,6 +147,9 @@
   position: relative;
   border-radius: 50%;
   overflow: visible;
+  padding: 6px;
+  background: linear-gradient(135deg, #39d5c1, #073f46, #087f8c);
+  box-shadow: 0 20px 40px rgba(7, 84, 92, .18);
 }
 
 .profile-picture {
@@ -61,6 +170,13 @@
   transform: translateX(-50%);
   white-space: nowrap;
   z-index: 2;
+  background: white;
+  color: var(--navy);
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 11px;
+  font-weight: 700;
+  box-shadow: var(--shadow);
 }
 
 /* NAME AND TEXT */
@@ -78,6 +194,9 @@
   width: 100%;
   text-align: center;
   margin: 0 auto 10px;
+  color: var(--teal);
+  font-size: 15px;
+  font-weight: 700;
 }
 
 .hero-text h1 {
@@ -85,16 +204,21 @@
   text-align: center;
   margin: 0 auto 10px;
   line-height: 1.2;
+  font: 800 clamp(36px, 5vw, 56px)/1.1 "Outfit", sans-serif;
+  letter-spacing: -1px;
 }
 
 .hero-text h1 span {
   display: inline;
+  color: var(--teal);
 }
 
 .hero-text h2 {
   width: 100%;
   text-align: center;
   margin: 0 auto 15px;
+  color: var(--teal);
+  font: 600 clamp(16px, 2.5vw, 20px) "Outfit", sans-serif;
 }
 
 .hero-description {
@@ -103,6 +227,28 @@
   text-align: center;
   margin: 0 auto;
   line-height: 1.8;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.hero-pills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 18px;
+    margin-bottom: 10px;
+}
+
+.pill {
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 7px 16px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--navy);
+    box-shadow: 0 4px 12px rgba(7, 63, 70, .04);
 }
 
 /* BUTTONS */
@@ -114,6 +260,473 @@
   flex-wrap: wrap;
   gap: 15px;
   margin: 24px auto 0;
+}
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 28px;
+    min-height: 47px;
+    border: 2px solid var(--teal);
+    border-radius: 12px;
+    background: var(--teal);
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.btn:hover {
+    background: var(--navy);
+    border-color: var(--navy);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--teal);
+}
+
+.btn-outline:hover {
+    color: white;
+}
+
+.section {
+    padding: 78px 0;
+    scroll-margin-top: 75px;
+}
+
+.section:nth-child(even) {
+    background: rgba(255,255,255,.42);
+}
+
+.section-heading {
+    margin-bottom: 32px;
+}
+
+.section-number {
+    color: var(--teal);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 4px;
+}
+
+.section-title {
+    font: 700 clamp(32px, 4vw, 43px)/1.2 "Outfit", sans-serif;
+    letter-spacing: -1px;
+}
+
+.section-subtitle {
+    color: var(--muted);
+    margin-top: 10px;
+    max-width: 620px;
+    font-size: 15px;
+}
+
+.card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: var(--shadow);
+    transition: transform .25s, box-shadow .25s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba(7,63,70,.12);
+}
+
+.card h3 {
+    font: 700 21px "Outfit", sans-serif;
+    color: var(--navy);
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: var(--muted);
+    font-size: 15px;
+    margin-bottom: 13px;
+}
+
+.card p:last-child {
+    margin-bottom: 0;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.35fr .8fr;
+    gap: 22px;
+}
+
+.info-list {
+    display: grid;
+    gap: 16px;
+    margin-top: 18px;
+}
+
+.info-item {
+    display: flex;
+    gap: 13px;
+    align-items: flex-start;
+}
+
+.info-icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #e6f8f4;
+    display: grid;
+    place-items: center;
+    color: var(--teal);
+    font-weight: 800;
+}
+
+.info-item strong {
+    display: block;
+    font-size: 14px;
+    color: var(--navy);
+}
+
+.info-item small {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.education-card {
+    position: relative;
+    padding-left: 31px;
+}
+
+.education-card::before {
+    content: "";
+    position: absolute;
+    left: 14px;
+    top: 32px;
+    bottom: 32px;
+    width: 2px;
+    background: #c8ece5;
+}
+
+.education-item {
+    position: relative;
+    padding: 0 0 27px 16px;
+}
+
+.education-item:last-child {
+    padding-bottom: 0;
+}
+
+.education-item::before {
+    content: "";
+    position: absolute;
+    left: -22px;
+    top: 8px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--teal);
+    border: 3px solid #d7f5ef;
+}
+
+.education-item h4 {
+    color: var(--navy);
+    font-size: 16px;
+    margin-bottom: 3px;
+}
+
+.education-item p {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 8px;
+}
+
+.education-item .date {
+    display: inline-block;
+    font-size: 11px;
+    color: var(--teal);
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.skill {
+    margin-top: 18px;
+}
+
+.skill-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.skill-top span:last-child {
+    color: var(--teal);
+    font-size: 12px;
+}
+
+.skill-track {
+    height: 8px;
+    background: #e7f1ef;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.skill-fill {
+    height: 100%;
+    width: var(--level);
+    background: linear-gradient(90deg, var(--teal), var(--cyan));
+    border-radius: inherit;
+    transform-origin: left;
+    animation: fill-in 1s ease both;
+}
+
+@keyframes fill-in {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 17px;
+}
+
+.tags span {
+    padding: 8px 13px;
+    border: 1px solid #d1ece6;
+    background: #eaf8f5;
+    color: var(--navy);
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    transition: .25s;
+}
+
+.tags span:hover {
+    transform: translateY(-3px);
+    background: #d9f5ef;
+}
+
+.soft-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.soft-item {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    padding: 20px;
+    transition: transform .25s, box-shadow .25s;
+}
+
+.soft-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.soft-item .symbol {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    background: #e6f8f4;
+    color: var(--teal);
+    border-radius: 10px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.soft-item h3 {
+    font: 700 16px "Outfit", sans-serif;
+    color: var(--navy);
+    margin-bottom: 5px;
+}
+
+.soft-item p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 260px;
+}
+
+.project-top {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+}
+
+.project-symbol {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 13px;
+    background: var(--navy);
+    color: var(--cyan);
+    font: 800 19px "Outfit", sans-serif;
+}
+
+.project-top h3 {
+    margin-bottom: 2px;
+}
+
+.project-type {
+    color: var(--teal);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.project-card .tags {
+    margin-top: auto;
+    padding-top: 10px;
+    margin-bottom: 17px;
+}
+
+.project-link {
+    color: var(--teal);
+    font-size: 13px;
+    font-weight: 800;
+    align-self: flex-start;
+}
+
+.project-link:hover {
+    color: var(--navy);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    gap: 22px;
+}
+
+.contact-details {
+    display: grid;
+    gap: 14px;
+    margin-top: 22px;
+}
+
+.contact-detail {
+    padding: 14px;
+    background: #f0faf8;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+.contact-detail strong {
+    display: block;
+    color: var(--navy);
+    font-size: 13px;
+}
+
+.contact-detail a,
+.contact-detail span {
+    color: var(--muted);
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+form {
+    display: grid;
+    gap: 10px;
+}
+
+form label {
+    font-size: 13px;
+    font-weight: 700;
+    margin-top: 7px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #cfe3df;
+    border-radius: 9px;
+    background: #fbfefd;
+    color: var(--text);
+    outline: none;
+    font-size: 14px;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: var(--teal);
+    box-shadow: 0 0 0 3px rgba(8,127,140,.1);
+}
+
+form textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+form button {
+    justify-self: start;
+    margin-top: 10px;
+}
+
+.form-note {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 12px;
+}
+
+footer {
+    background: var(--navy);
+    color: #c9e5e2;
+    padding: 26px 0;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+.footer-content p {
+    font-size: 12px;
+}
+
+.footer-logo {
+    color: white;
+    font: 700 19px "Outfit", sans-serif;
+}
+
+.back-top {
+    color: var(--cyan);
+    font-size: 13px;
+    font-weight: 700;
 }
 
 /* MOBILE ALIGNMENT */
@@ -180,4 +793,475 @@
     text-align: center;
   }
 }
-```
+
+@media (max-width: 650px) {
+    .navbar {
+        height: 67px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 67px;
+        padding: 10px 5% 18px;
+        background: var(--navy);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 11px 0;
+        border-bottom: 1px solid rgba(255,255,255,.1);
+    }
+
+    .section {
+        padding: 58px 0;
+    }
+
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .soft-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 11px;
+    }
+
+    .soft-item {
+        padding: 15px;
+    }
+
+    .card {
+        padding: 22px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 380px) {
+    .soft-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation: none !important;
+        transition: none !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="container navbar">
+        <a href="#home" class="logo">JP<span>.</span></a>
+
+        <button class="menu-toggle" aria-label="Open navigation"
+                aria-expanded="false">☰</button>
+
+        <nav class="nav-links" aria-label="Main navigation">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+<section class="container hero" id="home">
+    <div class="hero-content">
+        <div class="hero-visual">
+            <div class="initial-card">
+                <img src="profile.jpg" alt="Joshua Pablo's profile picture" class="profile-picture">
+                <div class="floating-label">✦ Future Game Developer</div>
+            </div>
+        </div>
+
+        <div class="hero-text">
+            <span class="eyebrow">Hello, I'm</span>
+            <h1>Joshua <span>Pablo.</span></h1>
+            <h2>Aspiring Game Programmer</h2>
+
+            <p class="hero-description">
+                I'm a second-year BS Technology student from Nueva Vizcaya, Philippines. I enjoy solving problems, learning programming, and exploring how technology can turn creative ideas into useful applications and games.
+            </p>
+
+            <div class="hero-pills">
+                <span class="pill">BS Technology, Second Year</span>
+                <span class="pill">Nueva Vizcaya State University</span>
+            </div>
+
+            <div class="hero-buttons">
+                <a href="#projects" class="btn">Explore My Work ↗</a>
+                <a href="#contact" class="btn btn-outline">Get in Touch</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="about">
+    <div class="container">
+        <div class="section-heading">
+            <p class="section-number">01 / INTRODUCTION</p>
+            <h2 class="section-title">About Me</h2>
+            <p class="section-subtitle">
+                Get to know my background, interests, and what motivates me.
+            </p>
+        </div>
+
+        <div class="about-grid">
+            <article class="card">
+                <h3>Who I Am</h3>
+                <p>
+                    My name is Joshua Pablo, and I am a second-year
+                    Bachelor of Science in Technology student from
+                    Nueva Vizcaya, Philippines.
+                </p>
+                <p>
+                    I am interested in programming, technology, and
+                    game development. I believe that every challenge
+                    is an opportunity to learn something new, improve
+                    my abilities, and become a better problem-solver.
+                </p>
+                <p>
+                    Outside academics, I enjoy playing chess, cycling,
+                    and Mobile Legends. These hobbies reflect my interest
+                    in strategy, challenges, and continuous improvement.
+                </p>
+                <h3 style="margin-top:25px">My Goal</h3>
+                <p>
+                    My goal is to become a successful game programmer
+                    and eventually create games that people can enjoy.
+                    I am committed to strengthening my programming
+                    foundation through practice, personal projects,
+                    and continuous learning.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>Quick Information</h3>
+                <div class="info-list">
+                    <div class="info-item">
+                        <div class="info-icon">01</div>
+                        <div><strong>Name</strong><small>Joshua Pablo</small></div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">02</div>
+                        <div><strong>Location</strong><small>Nueva Vizcaya, Philippines</small></div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">03</div>
+                        <div><strong>Education</strong><small>BS Technology · 2nd Year</small></div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">04</div>
+                        <div><strong>Career Interest</strong><small>Game Programming</small></div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">05</div>
+                        <div><strong>Hobbies</strong><small>Chess, Cycling, Mobile Legends</small></div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="education">
+    <div class="container">
+        <div class="section-heading">
+            <p class="section-number">02 / MY JOURNEY</p>
+            <h2 class="section-title">Education</h2>
+            <p class="section-subtitle">
+                My educational background and ongoing learning journey.
+            </p>
+        </div>
+
+        <article class="card education-card">
+            <div class="education-item">
+                <span class="date">CURRENT</span>
+                <h4>Bachelor of Science in Technology</h4>
+                <p>College · Second Year</p>
+                <p>Developing my understanding of programming, computer technology, and problem-solving.</p>
+            </div>
+            <div class="education-item">
+                <span class="date">PREVIOUS EDUCATION</span>
+                <h4>Senior High School</h4>
+                <p>Building the academic foundation that prepared me for college and further learning.</p>
+            </div>
+        </article>
+    </div>
+</section>
+
+<section class="section" id="skills">
+    <div class="container">
+        <div class="section-heading">
+            <p class="section-number">03 / WHAT I AM LEARNING</p>
+            <h2 class="section-title">Skills & Technologies</h2>
+            <p class="section-subtitle">
+                The technical areas and tools I am learning and exploring.
+            </p>
+        </div>
+
+        <div class="skills-grid">
+            <article class="card">
+                <h3>Programming & Web Development</h3>
+                <div class="skill">
+                    <div class="skill-top"><span>HTML</span><span>Learning</span></div>
+                    <div class="skill-track"><div class="skill-fill" style="--level:65%"></div></div>
+                </div>
+                <div class="skill">
+                    <div class="skill-top"><span>CSS</span><span>Learning</span></div>
+                    <div class="skill-track"><div class="skill-fill" style="--level:55%"></div></div>
+                </div>
+                <div class="skill">
+                    <div class="skill-top"><span>Java</span><span>Learning</span></div>
+                    <div class="skill-track"><div class="skill-fill" style="--level:50%"></div></div>
+                </div>
+                <p style="margin-top:20px;font-size:12px">
+                    Progress indicators are approximate and can be adjusted to reflect your actual skills.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>Tools & Technologies</h3>
+                <p>Tools I use or am exploring in my learning journey.</p>
+                <div class="tags">
+                    <span>VS Code</span><span>GitHub</span><span>Git</span>
+                    <span>GitHub Pages</span><span>HTML5</span><span>CSS3</span><span>Java</span>
+                </div>
+            </article>
+        </div>
+
+        <div style="height:22px"></div>
+
+        <article class="card">
+            <h3>Soft Skills</h3>
+            <p>Personal strengths and habits I value as a student and aspiring programmer.</p>
+            <div class="tags">
+                <span>Critical Thinking</span><span>Problem Solving</span>
+                <span>Logical Thinking</span><span>Adaptability</span>
+                <span>Willingness to Learn</span><span>Persistence</span><span>Creativity</span>
+            </div>
+        </article>
+    </div>
+</section>
+
+<section class="section" id="interests">
+    <div class="container">
+        <div class="section-heading">
+            <p class="section-number">04 / BEYOND THE CLASSROOM</p>
+            <h2 class="section-title">Interests & Hobbies</h2>
+            <p class="section-subtitle">Activities that keep me motivated, curious, and challenged.</p>
+        </div>
+
+        <div class="soft-grid">
+            <article class="soft-item">
+                <div class="symbol">♟</div>
+                <h3>Chess</h3>
+                <p>Practicing strategy, planning, and decision-making.</p>
+            </article>
+            <article class="soft-item">
+                <div class="symbol">↗</div>
+                <h3>Cycling</h3>
+                <p>Enjoying outdoor activity and personal challenges.</p>
+            </article>
+            <article class="soft-item">
+                <div class="symbol">G</div>
+                <h3>Gaming</h3>
+                <p>Enjoying games and learning from interactive experiences.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="projects">
+    <div class="container">
+        <div class="section-heading">
+            <p class="section-number">05 / MY WORK</p>
+            <h2 class="section-title">Projects</h2>
+            <p class="section-subtitle">Academic work and personal projects that represent my development as a technology student.</p>
+        </div>
+
+        <div class="projects-grid">
+            <article class="card project-card">
+                <div class="project-top">
+                    <div class="project-symbol">01</div>
+                    <div><h3>Personal Portfolio</h3><span class="project-type">Web Development</span></div>
+                </div>
+                <p>A personal website that introduces my background, interests, skills, and goals as an aspiring programmer.</p>
+                <div class="tags"><span>HTML</span><span>CSS</span><span>GitHub Pages</span></div>
+                <a class="project-link" href="https://joshua-pablo.github.io" target="_blank" rel="noopener noreferrer">View Live Website ↗</a>
+            </article>
+
+            <article class="card project-card">
+                <div class="project-top">
+                    <div class="project-symbol">02</div>
+                    <div><h3>Java Activities</h3><span class="project-type">Programming Practice</span></div>
+                </div>
+                <p>Programming exercises focused on Java fundamentals, input and output, logical reasoning, and problem-solving.</p>
+                <div class="tags"><span>Java</span><span>Logic</span><span>Practice</span></div>
+                <a class="project-link" href="https://github.com/joshua-pablo" target="_blank" rel="noopener noreferrer">Explore GitHub ↗</a>
+            </article>
+
+            <article class="card project-card">
+                <div class="project-top">
+                    <div class="project-symbol">03</div>
+                    <div><h3>Future Game Project</h3><span class="project-type">In Development</span></div>
+                </div>
+                <p>A future personal project where I plan to apply my programming knowledge to interactive game ideas.</p>
+                <div class="tags"><span>Game Development</span><span>Programming</span></div>
+                <span class="project-link">Planned Project</span>
+            </article>
+
+            <article class="card project-card">
+                <div class="project-top">
+                    <div class="project-symbol">04</div>
+                    <div><h3>More Projects to Come</h3><span class="project-type">Learning Journey</span></div>
+                </div>
+                <p>I will continue adding projects as I learn new technologies, complete coursework, and build more practical programming experience.</p>
+                <div class="tags"><span>Continuous Learning</span><span>Technology</span></div>
+                <a class="project-link" href="https://github.com/joshua-pablo" target="_blank" rel="noopener noreferrer">Visit My GitHub ↗</a>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="contact">
+    <div class="container">
+        <div class="section-heading">
+            <p class="section-number">06 / LET'S CONNECT</p>
+            <h2 class="section-title">Contact Me</h2>
+            <p class="section-subtitle">Have an opportunity, suggestion, or idea? Feel free to connect.</p>
+        </div>
+
+        <div class="contact-grid">
+            <article class="card">
+                <h3>Let's Connect</h3>
+                <p>I am interested in learning opportunities, programming, and connecting with people who share an interest in technology and game development.</p>
+                <div class="contact-details">
+                    <div class="contact-detail">
+                        <strong>GitHub Profile</strong>
+                        <a href="https://github.com/joshua-pablo" target="_blank" rel="noopener noreferrer">github.com/joshua-pablo</a>
+                    </div>
+                    <div class="contact-detail">
+                        <strong>Location</strong><span>Nueva Vizcaya, Philippines</span>
+                    </div>
+                    <div class="contact-detail">
+                        <strong>Career Goal</strong><span>Aspiring Game Programmer</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <h3>Send a Message</h3>
+                <p>Complete the form to prepare a message in your default email application.</p>
+                <form id="contact-form">
+                    <label for="name">Your Name</label>
+                    <input id="name" name="name" type="text" placeholder="Enter your name" required>
+
+                    <label for="email">Your Email</label>
+                    <input id="email" name="email" type="email" placeholder="Enter your email" required>
+
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+
+                    <button class="btn" type="submit">Prepare Email ↗</button>
+                </form>
+                <p class="form-note">This form opens your email application. It does not send or store messages directly on this website.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <div class="container footer-content">
+        <a class="footer-logo" href="#home">JP<span>.</span></a>
+        <p>© 2026 Joshua Pablo · Built with HTML, CSS & JavaScript</p>
+        <a class="back-top" href="#home">Back to top ↑</a>
+    </div>
+</footer>
+
+<script>
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+menuToggle.addEventListener("click", () => {
+    const isOpen = navLinks.classList.toggle("open");
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+    menuToggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+    menuToggle.textContent = isOpen ? "✕" : "☰";
+});
+
+navLinks.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation");
+        menuToggle.textContent = "☰";
+    });
+});
+
+document.querySelector("#contact-form").addEventListener("submit", event => {
+    event.preventDefault();
+
+    const name = document.querySelector("#name").value.trim();
+    const email = document.querySelector("#email").value.trim();
+    const message = document.querySelector("#message").value.trim();
+
+    const subject = encodeURIComponent("Portfolio Message from " + name);
+    const body = encodeURIComponent(
+        "Name: " + name + "\n" +
+        "Email: " + email + "\n\n" +
+        "Message:\n" + message
+    );
+
+    window.location.href = "mailto:?subject=" + subject + "&body=" + body;
+});
+
+const sections = document.querySelectorAll("main section[id]");
+const navItems = document.querySelectorAll(".nav-links a");
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            navItems.forEach(link => {
+                link.classList.toggle(
+                    "active",
+                    link.getAttribute("href") === "#" + entry.target.id
+                );
+            });
+        }
+    });
+}, { rootMargin: "-25% 0px -60% 0px" });
+
+sections.forEach(section => observer.observe(section));
+</script>
+
+</body>
+</html>

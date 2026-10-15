@@ -929,7 +929,7 @@ footer {
             </div>
             <div class="detail-block">
                 <h4>Physical Stats</h4>
-                <p>Male | Height: 5/4 | Weight:54</p>
+                <p>Male | Height: 5/4 | Weight: 54</p>
             </div>
             <div class="detail-block">
                 <h4>Citizenship & Status</h4>
@@ -945,21 +945,17 @@ footer {
         <article class="card">
             <div class="detail-block">
                 <h4>Father's Name</h4>
-                <p>Celestino G. Pablo Jr.(foreman)</p>
+                <p>Celestino G. Pablo Jr. (Foreman)</p>
             </div>
             <div class="detail-block">
                 <h4>Mother's Name</h4>
                 <p>Rowena V. Pablo (Food vendor)</p>
             </div>
             <div class="detail-block">
-                <h4>Oldest Sister</h4>
-                <p>Ruth V. Pablo(Graduated)</p>
-<h4>Oldest Brother</h4>
-                <p>Jeremiah V. Pablo(3rd year Criminology</p>
-<h4>Youngest Sister</h4>
-                <p>Rebeca V. Pablo(Grade 11-ABM)</p>
-            </div>
-            </div>
+                <h4>Siblings</h4>
+                <p style="margin-bottom: 6px;"><strong>Oldest Sister:</strong> Ruth V. Pablo (Graduated)</p>
+                <p style="margin-bottom: 6px;"><strong>Oldest Brother:</strong> Jeremiah V. Pablo (3rd Year Criminology)</p>
+                <p><strong>Youngest Sister:</strong> Rebeca V. Pablo (Grade 11 - ABM)</p>
             </div>
         </article>
     </div>
@@ -1163,17 +1159,21 @@ footer {
                         <a href="https://github.com/joshua-pablo" target="_blank" rel="noopener noreferrer">github.com/joshua-pablo</a>
                     </div>
                     <div class="contact-detail">
-                        <strong>Location</strong><span>Purok 1, Bone South, Aritao, Nueva Vizcaya, Philippines</span>
+                        <strong>Location</strong>
+                        <span>Purok 1, Bone South, Aritao, Nueva Vizcaya, Philippines</span>
                     </div>
                     <div class="contact-detail">
-                        <strong>Facebook Account</strong><span>Joshua V. Pablo</span>
+                        <strong>Facebook Account</strong>
+                        <span>Joshua V. Pablo</span>
                     </div>
-                </div>
-                       <strong>Email Account</strong><span>joshuavaldezabubo@gmail.com</span>
+                    <div class="contact-detail">
+                        <strong>Email Account</strong>
+                        <span>joshuavaldezabubo@gmail.com</span>
                     </div>
-                       <strong>Contact Number</strong><span>09352441967</span>
+                    <div class="contact-detail">
+                        <strong>Contact Number</strong>
+                        <span>09352441967</span>
                     </div>
-                </div>
                 </div>
             </article>
 
@@ -1182,17 +1182,17 @@ footer {
                 <p>Complete the form to prepare a message in your default email application.</p>
                 <form id="contact-form">
                     <label for="name">Your Name</label>
-                    <input id="name" name="name" type="text" placeholder="Enter your name" required>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
                     <label for="email">Your Email</label>
-                    <input id="email" name="email" type="email" placeholder="Enter your email" required>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
 
-                    <label for="message">Your Message</label>
+                    <label for="message">Message</label>
                     <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
 
-                    <button class="btn" type="submit">Prepare Email ↗</button>
+                    <button type="submit" class="btn">Send Message</button>
                 </form>
-                <p class="form-note">This form opens your email application. It does not send or store messages directly on this website.</p>
+                <p class="form-note">This form uses your mail client to send messages directly.</p>
             </article>
         </div>
     </div>
@@ -1202,67 +1202,11 @@ footer {
 
 <footer>
     <div class="container footer-content">
-        <a class="footer-logo" href="#home">JP<span>.</span></a>
-        <p>© 2026 Joshua V. Pablo · Built with HTML, CSS & JavaScript</p>
-        <a class="back-top" href="#home">Back to top ↑</a>
+        <div class="footer-logo">JP<span>.</span></div>
+        <p>© 2026 Joshua V. Pablo. All rights reserved.</p>
+        <a href="#home" class="back-top">Back to top ↑</a>
     </div>
 </footer>
-
-<script>
-const menuToggle = document.querySelector(".menu-toggle");
-const navLinks = document.querySelector(".nav-links");
-
-menuToggle.addEventListener("click", () => {
-    const isOpen = navLinks.classList.toggle("open");
-    menuToggle.setAttribute("aria-expanded", String(isOpen));
-    menuToggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
-    menuToggle.textContent = isOpen ? "✕" : "☰";
-});
-
-navLinks.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", () => {
-        navLinks.classList.remove("open");
-        menuToggle.setAttribute("aria-expanded", "false");
-        menuToggle.setAttribute("aria-label", "Open navigation");
-        menuToggle.textContent = "☰";
-    });
-});
-
-document.querySelector("#contact-form").addEventListener("submit", event => {
-    event.preventDefault();
-
-    const name = document.querySelector("#name").value.trim();
-    const email = document.querySelector("#email").value.trim();
-    const message = document.querySelector("#message").value.trim();
-
-    const subject = encodeURIComponent("Portfolio Message from " + name);
-    const body = encodeURIComponent(
-        "Name: " + name + "\n" +
-        "Email: " + email + "\n\n" +
-        "Message:\n" + message
-    );
-
-    window.location.href = "mailto:?subject=" + subject + "&body=" + body;
-});
-
-const sections = document.querySelectorAll("main section[id]");
-const navItems = document.querySelectorAll(".nav-links a");
-
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            navItems.forEach(link => {
-                link.classList.toggle(
-                    "active",
-                    link.getAttribute("href") === "#" + entry.target.id
-                );
-            });
-        }
-    });
-}, { rootMargin: "-25% 0px -60% 0px" });
-
-sections.forEach(section => observer.observe(section));
-</script>
 
 </body>
 </html>

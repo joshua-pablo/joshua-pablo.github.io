@@ -21,7 +21,7 @@ async function loadProjects() {
           <p class="project-role">Role: ${escapeHTML(project.role)}</p>
           <div class="tag-list">${(project.technologies || []).map(tech => `<span>${escapeHTML(tech)}</span>`).join("")}</div>
           <div class="project-links">
-            ${project.link ? `<a href="${safeURL(project.link)}" target="_blank" rel="noreferrer">View project ↗</a>` : `<span>Project link coming soon</span>`}
+            ${project.sourceCode ? `<a href="${safeURL(project.link)}" target="_blank" rel="noreferrer">Live Demo ↗</a><a href="${safeURL(project.sourceCode)}" target="_blank" rel="noreferrer">Source Code ↗</a>` : project.link ? `<a href="${safeURL(project.link)}" target="_blank" rel="noreferrer">View project ↗</a>` : `<span>Project link coming soon</span>`}
           </div>
         </div>
       </article>`).join("");

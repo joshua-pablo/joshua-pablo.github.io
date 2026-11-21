@@ -21,7 +21,15 @@ async function loadProjects() {
           <p class="project-role">Role: ${escapeHTML(project.role)}</p>
           <div class="tag-list">${(project.technologies || []).map(tech => `<span>${escapeHTML(tech)}</span>`).join("")}</div>
           <div class="project-links">
-            ${project.title === "Unit Converter App" ? `<button class="project-details-toggle" type="button" onclick="toggleUnitConverterDetails(this)" aria-expanded="false">View Details ↗</button>` : ""}
+            ${project.title === "Unit Converter App" ? `<details class="project-inline-details">
+                        <summary>View Details ↗</summary>
+                        <p class="project-role">PROJECT DETAILS / 04</p>
+                        <p>${escapeHTML(project.description)}</p>
+                        <h4>Technologies Used</h4>
+                        <div class="tag-list">${(project.technologies || []).map(tech => `<span>${escapeHTML(tech)}</span>`).join("")}</div>
+                        <h4>Project Links</h4>
+                        <div class="project-links"><a href="${safeURL(project.link)}" target="_blank" rel="noreferrer">Live Demo ↗</a><a href="${safeURL(project.sourceCode)}" target="_blank" rel="noreferrer">Source Code ↗</a></div>
+                      </details>` : ""}
             ${project.sourceCode ? `<a href="${safeURL(project.link)}" target="_blank" rel="noreferrer">Live Demo ↗</a><a href="${safeURL(project.sourceCode)}" target="_blank" rel="noreferrer">Source Code ↗</a>` : project.link ? `<a href="${safeURL(project.link)}" target="_blank" rel="noreferrer">View project ↗</a>` : `<span>Project link coming soon</span>`}
           </div>
           ${project.title === "Unit Converter App" ? `<div class="project-inline-details" data-project-inline-details hidden>
@@ -159,11 +167,3 @@ loadProjects();
 loadGitHubRepos();
 
 
-function toggleUnitConverterDetails(button) {
-  const details = button.closest(".project-body")?.querySelector("[data-project-inline-details]");
-  if (!details) return;
-  const expanded = button.getAttribute("aria-expanded") === "true";
-  details.hidden = expanded;
-  button.setAttribute("aria-expanded", String(!expanded));
-  button.textContent = expanded ? "View Details ↗" : "Hide Details ↑";
-}

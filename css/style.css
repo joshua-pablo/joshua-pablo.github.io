@@ -1265,3 +1265,9 @@ sections.forEach(section => observer.observe(section));
 
 </body>
 </html>
+/* Unit Converter App details button and expandable content */
+.project-details-toggle { display:inline-flex; align-items:center; justify-content:center; min-height:42px; padding:10px 16px; border:1px solid var(--accent, #008b8b); border-radius:8px; background:var(--surface, #fff); color:var(--accent, #008b8b); font:600 14px inherit; cursor:pointer; touch-action:manipulation; }
+.project-details-toggle:active { transform:scale(.98); }
+.project-inline-details { margin-top:20px; padding-top:18px; border-top:1px solid var(--line, #d5e5e5); }
+.project-inline-details[hidden] { display:none !important; }
+.project-inline-details h4 { margin:18px 0 10px; }

@@ -21,7 +21,7 @@ async function loadProjects() {
           <p class="project-role">Role: ${escapeHTML(project.role)}</p>
           <div class="tag-list">${(project.technologies || []).map(tech => `<span>${escapeHTML(tech)}</span>`).join("")}</div>
           <div class="project-links">
-            ${project.title === "Unit Converter App" ? `<button class="project-details-toggle" type="button" data-project-details-toggle aria-expanded="false">View Details ↗</button>` : ""}
+            ${project.title === "Unit Converter App" ? `<button class="project-details-toggle" type="button" onclick="toggleUnitConverterDetails(this)" aria-expanded="false">View Details ↗</button>` : ""}
             ${project.sourceCode ? `<a href="${safeURL(project.link)}" target="_blank" rel="noreferrer">Live Demo ↗</a><a href="${safeURL(project.sourceCode)}" target="_blank" rel="noreferrer">Source Code ↗</a>` : project.link ? `<a href="${safeURL(project.link)}" target="_blank" rel="noreferrer">View project ↗</a>` : `<span>Project link coming soon</span>`}
           </div>
           ${project.title === "Unit Converter App" ? `<div class="project-inline-details" data-project-inline-details hidden>
@@ -159,13 +159,11 @@ loadProjects();
 loadGitHubRepos();
 
 
-projectsGrid.addEventListener("click", event => {
-  const button = event.target.closest("[data-project-details-toggle]");
-  if (!button) return;
+function toggleUnitConverterDetails(button) {
   const details = button.closest(".project-body")?.querySelector("[data-project-inline-details]");
   if (!details) return;
   const expanded = button.getAttribute("aria-expanded") === "true";
-  button.setAttribute("aria-expanded", String(!expanded));
   details.hidden = expanded;
+  button.setAttribute("aria-expanded", String(!expanded));
   button.textContent = expanded ? "View Details ↗" : "Hide Details ↑";
-});
+}

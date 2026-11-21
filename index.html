@@ -782,10 +782,11 @@ footer {
         transition: none !important;
     }
 }
-/* Unit Converter View Details button */
-.project-details-toggle { display:inline-flex; align-items:center; justify-content:center; min-height:42px; padding:10px 16px; border:1px solid var(--teal); border-radius:8px; background:#fff; color:var(--teal); font:600 14px "DM Sans",sans-serif; cursor:pointer; touch-action:manipulation; }
-.project-inline-details { margin-top:20px; padding-top:18px; border-top:1px solid var(--border); }
-.project-inline-details[hidden] { display:none !important; }
+/* Native expandable Unit Converter project details */
+.project-inline-details { margin-top:18px; padding-top:16px; border-top:1px solid var(--border); }
+.project-inline-details summary { display:inline-flex; align-items:center; min-height:42px; padding:9px 15px; border:1px solid var(--teal); border-radius:8px; color:var(--teal); background:#fff; font-weight:700; cursor:pointer; list-style:none; touch-action:manipulation; }
+.project-inline-details summary::-webkit-details-marker { display:none; }
+.project-inline-details[open] summary { margin-bottom:14px; }
 .project-inline-details h4 { margin:18px 0 10px; }
 
 </style>
@@ -1234,6 +1235,6 @@ footer {
     </div>
 </footer>
 
-    <script src="script.js?v=20261121-2" defer></script>
+    <script src="script.js?v=20261121-3" defer></script>
 </body>
 </html>

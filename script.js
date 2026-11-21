@@ -149,21 +149,14 @@ document.getElementById("year").textContent = new Date().getFullYear();
 loadProjects();
 loadGitHubRepos();
 
-const unitConverterModal = document.getElementById("unit-converter-modal");
-const openUnitConverterDetails = document.querySelector('[data-project-details="unit-converter"]');
-function closeUnitConverterModal() {
-  if (!unitConverterModal) return;
-  unitConverterModal.classList.remove("is-open");
-  unitConverterModal.setAttribute("aria-hidden", "true");
-  document.body.classList.remove("modal-open");
-}
-if (openUnitConverterDetails && unitConverterModal) {
-  openUnitConverterDetails.addEventListener("click", () => {
-    unitConverterModal.classList.add("is-open");
-    unitConverterModal.setAttribute("aria-hidden", "false");
-    document.body.classList.add("modal-open");
-    unitConverterModal.querySelector(".project-modal-close").focus();
+
+const unitConverterDetailsButton = document.querySelector('[data-project-details="unit-converter"]');
+const unitConverterInlineDetails = document.getElementById("unit-converter-inline-details");
+if (unitConverterDetailsButton && unitConverterInlineDetails) {
+  unitConverterDetailsButton.addEventListener("click", () => {
+    const isExpanded = unitConverterDetailsButton.getAttribute("aria-expanded") === "true";
+    unitConverterDetailsButton.setAttribute("aria-expanded", String(!isExpanded));
+    unitConverterInlineDetails.hidden = isExpanded;
+    unitConverterDetailsButton.textContent = isExpanded ? "View Details ↗" : "Hide Details ↑";
   });
-  unitConverterModal.querySelectorAll("[data-close-project-modal]").forEach(button => button.addEventListener("click", closeUnitConverterModal));
-  document.addEventListener("keydown", event => { if (event.key === "Escape") closeUnitConverterModal(); });
 }

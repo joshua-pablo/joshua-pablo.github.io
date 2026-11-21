@@ -789,6 +789,16 @@ footer {
 .project-inline-details[open] summary { margin-bottom:14px; }
 .project-inline-details h4 { margin:18px 0 10px; }
 
+/* Unit Converter native details card */
+.unit-converter-details { margin-top: 16px; }
+.unit-converter-details summary { display: inline-block; cursor: pointer; list-style: none; }
+.unit-converter-details summary::-webkit-details-marker { display: none; }
+.unit-converter-details[open] summary { margin-bottom: 16px; }
+.unit-converter-details-content { margin-top: 12px; padding-top: 18px; border-top: 1px solid var(--border, #d7e5e5); }
+.unit-converter-details-content h4 { margin: 18px 0 10px; }
+.unit-converter-details-content p { line-height: 1.65; }
+.unit-converter-details-content .project-modal-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
 </style>
 </head>
 
@@ -1151,18 +1161,20 @@ footer {
                 </div>
                 <p>A web-based application that allows users to convert different units of measurement quickly and easily.</p>
                 <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-                <button class="project-link details-button" type="button" data-project-details="unit-converter" aria-expanded="false" aria-controls="unit-converter-inline-details">View Details ↗</button>
-                <div class="project-inline-details" id="unit-converter-inline-details" hidden>
-                    <p class="project-modal-eyebrow">PROJECT DETAILS / 05</p>
-                    <p class="project-modal-description">A web-based application that allows users to convert different units of measurement quickly and easily.</p>
-                    <h4>Technologies Used</h4>
-                    <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-                    <h4>Project Links</h4>
-                    <div class="project-modal-actions">
-                        <a class="project-link" href="https://joshua-pablo.github.io/unit-converter-app-Joshua/" target="_blank" rel="noopener noreferrer">Live Demo ↗</a>
-                        <a class="project-link" href="https://github.com/joshua-pablo/unit-converter-app-Joshua" target="_blank" rel="noopener noreferrer">Source Code ↗</a>
+                <details class="unit-converter-details">
+                    <summary class="project-link">View Details ↗</summary>
+                    <div class="unit-converter-details-content">
+                        <p class="project-modal-eyebrow">PROJECT DETAILS / 05</p>
+                        <p class="project-modal-description">A web-based application that allows users to convert different units of measurement quickly and easily.</p>
+                        <h4>Technologies Used</h4>
+                        <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                        <h4>Project Links</h4>
+                        <div class="project-modal-actions">
+                            <a class="project-link" href="https://joshua-pablo.github.io/unit-converter-app-Joshua/" target="_blank" rel="noopener noreferrer">Live Demo ↗</a>
+                            <a class="project-link" href="https://github.com/joshua-pablo/unit-converter-app-Joshua" target="_blank" rel="noopener noreferrer">Source Code ↗</a>
+                        </div>
                     </div>
-                </div>
+                </details></div>
             </article>
         </div>
     </div>

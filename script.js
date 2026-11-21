@@ -21,8 +21,17 @@ async function loadProjects() {
           <p class="project-role">Role: ${escapeHTML(project.role)}</p>
           <div class="tag-list">${(project.technologies || []).map(tech => `<span>${escapeHTML(tech)}</span>`).join("")}</div>
           <div class="project-links">
+            ${project.title === "Unit Converter App" ? `<button class="project-details-toggle" type="button" data-project-details-toggle aria-expanded="false">View Details ↗</button>` : ""}
             ${project.sourceCode ? `<a href="${safeURL(project.link)}" target="_blank" rel="noreferrer">Live Demo ↗</a><a href="${safeURL(project.sourceCode)}" target="_blank" rel="noreferrer">Source Code ↗</a>` : project.link ? `<a href="${safeURL(project.link)}" target="_blank" rel="noreferrer">View project ↗</a>` : `<span>Project link coming soon</span>`}
           </div>
+          ${project.title === "Unit Converter App" ? `<div class="project-inline-details" data-project-inline-details hidden>
+            <p class="project-role">PROJECT DETAILS / 05</p>
+            <p>${escapeHTML(project.description)}</p>
+            <h4>Technologies Used</h4>
+            <div class="tag-list">${(project.technologies || []).map(tech => `<span>${escapeHTML(tech)}</span>`).join("")}</div>
+            <h4>Project Links</h4>
+            <div class="project-links"><a href="${safeURL(project.link)}" target="_blank" rel="noreferrer">Live Demo ↗</a><a href="${safeURL(project.sourceCode)}" target="_blank" rel="noreferrer">Source Code ↗</a></div>
+          </div>` : ""}
         </div>
       </article>`).join("");
   } catch (error) {
@@ -150,13 +159,13 @@ loadProjects();
 loadGitHubRepos();
 
 
-const unitConverterDetailsButton = document.querySelector('[data-project-details="unit-converter"]');
-const unitConverterInlineDetails = document.getElementById("unit-converter-inline-details");
-if (unitConverterDetailsButton && unitConverterInlineDetails) {
-  unitConverterDetailsButton.addEventListener("click", () => {
-    const isExpanded = unitConverterDetailsButton.getAttribute("aria-expanded") === "true";
-    unitConverterDetailsButton.setAttribute("aria-expanded", String(!isExpanded));
-    unitConverterInlineDetails.hidden = isExpanded;
-    unitConverterDetailsButton.textContent = isExpanded ? "View Details ↗" : "Hide Details ↑";
-  });
-}
+projectsGrid.addEventListener("click", event => {
+  const button = event.target.closest("[data-project-details-toggle]");
+  if (!button) return;
+  const details = button.closest(".project-body")?.querySelector("[data-project-inline-details]");
+  if (!details) return;
+  const expanded = button.getAttribute("aria-expanded") === "true";
+  button.setAttribute("aria-expanded", String(!expanded));
+  details.hidden = expanded;
+  button.textContent = expanded ? "View Details ↗" : "Hide Details ↑";
+});
